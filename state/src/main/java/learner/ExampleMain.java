@@ -24,7 +24,7 @@ public class ExampleMain {
 		
 		LearnLog.addAppender(new PrintStreamLoggingAppender(LogLevel.INFO,System.out));
 		LearnLog.addAppender(new HtmlLoggingAppender(LogLevel.DEBUG,
-            "/tmp/learn.html", false, false, false));
+            "./tmp/learn.html", false, false, false));
 		
 		// create oracle for mutex
 		Oracle testOracle = new ExampleOracle();
@@ -54,7 +54,7 @@ public class ExampleMain {
 		      learner.addCounterExample(o.getCounterExample(), o.getOracleOutput());
 		}
 
-		DotUtil.writeDot(learner.getResult(), new File("/tmp/learnresult.dot"));
+		DotUtil.writeDot(learner.getResult(), new File("./tmp/learnresult.dot"));
 	}
 
 }
