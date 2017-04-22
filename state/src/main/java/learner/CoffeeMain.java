@@ -1,4 +1,4 @@
-package src;
+package learner;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -68,9 +68,9 @@ public class CoffeeMain {
 		      learner.addCounterExample(o.getCounterExample(), o.getOracleOutput());
 		}
 
-		DotUtil.writeDot(learner.getResult(), new File("./tmp/learnresult.dot"));
+		DotUtil.writeDot(learner.getResult(), new File("./learnresult.dot"));
 		
-		File file = new File("./tmp/learnresult.dot");
+		File file = new File("./learnresult.dot");
 		BufferedReader br = new BufferedReader(new FileReader(file));  
 		String line = null;  
 		StringWriter copy = new StringWriter();
@@ -89,7 +89,7 @@ public class CoffeeMain {
 		}
 		br.close();
 
-		PrintWriter out = new PrintWriter("./tmp/learnresult.dot");
+		PrintWriter out = new PrintWriter("./learnresult.dot");
 		out.print(copy.toString());
 		out.close();
 		

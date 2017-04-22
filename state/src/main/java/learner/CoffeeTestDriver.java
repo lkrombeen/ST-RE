@@ -1,4 +1,4 @@
-package src;
+package learner;
 
 
 
@@ -12,7 +12,7 @@ import de.ls5.jlearn.shared.SymbolImpl;
 public class CoffeeTestDriver {
 
     // input symbols
-    private static final Symbol M1_IN = new SymbolImpl(".50_in");
+    /*private static final Symbol M1_IN = new SymbolImpl(".50_in");
     private static final Symbol M2_IN = new SymbolImpl("1.00_in");
     private static final Symbol M3_IN = new SymbolImpl("2.00_in");
 
@@ -38,7 +38,34 @@ public class CoffeeTestDriver {
 
     private static final Symbol ISS1 = new SymbolImpl("sugar_1?");
     private static final Symbol ISS2 = new SymbolImpl("sugar_2?");
-    private static final Symbol ISS3 = new SymbolImpl("sugar_3?");
+    private static final Symbol ISS3 = new SymbolImpl("sugar_3?");*/
+    private static final Symbol M1_IN = new SymbolImpl("c1");
+    private static final Symbol M2_IN = new SymbolImpl("c2");
+    private static final Symbol M3_IN = new SymbolImpl("c3");
+
+    private static final Symbol F1_IN = new SymbolImpl("f1");
+    private static final Symbol F2_IN = new SymbolImpl("f2");
+    private static final Symbol F3_IN = new SymbolImpl("f3");
+    
+    private static final Symbol S1_IN = new SymbolImpl("s1");
+    private static final Symbol S2_IN = new SymbolImpl("s2");
+    private static final Symbol S3_IN = new SymbolImpl("s3");
+
+    private static final Symbol C_IN = new SymbolImpl("C");
+    private static final Symbol A_IN = new SymbolImpl("A");
+
+    private static final Symbol ISM1 = new SymbolImpl("c4?");
+    private static final Symbol ISM2 = new SymbolImpl("c5?");
+    private static final Symbol ISM3 = new SymbolImpl("c6?");
+    private static final Symbol ISM4 = new SymbolImpl("c7?");
+
+    private static final Symbol ISF1 = new SymbolImpl("f4?");
+    private static final Symbol ISF2 = new SymbolImpl("f5?");
+    private static final Symbol ISF3 = new SymbolImpl("f3?");
+
+    private static final Symbol ISS1 = new SymbolImpl("s4?");
+    private static final Symbol ISS2 = new SymbolImpl("s5?");
+    private static final Symbol ISS3 = new SymbolImpl("s6?");
 
     // input alphabet used by learning algorithm
     public static final Alphabet SIGMA;

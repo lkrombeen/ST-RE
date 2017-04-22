@@ -1,4 +1,4 @@
-package src;
+package learner;
 
 
 
@@ -17,7 +17,7 @@ public class CoffeeMachine {
 		flavour = -1;
 		sugar = -1;
 		
-		state = 0;
+		state = 2;
 	}
 	
 	public void addMoney(float f) {
@@ -42,40 +42,45 @@ public class CoffeeMachine {
 		switch (state) {
 		case 0:
 			if (flavour != -1) {
+				sugar = 1;
 				state = 1;
 			}
 			break;
 		case 1:
 			if (sugar != -1) {
-				state = 2;
+				state = 3;
 			}
 			break;
 		case 2:
-			if (money >= 2F) {
+			if (money == 2F) {
 				money = 0;
-				flavour = -1;
+				flavour = 1;
 				sugar = -1;
 				state = 0;
+			} else if (money > 2F) {
+				money = 0;
+				flavour = -1;
+				sugar = 1;
+				state = 1;
 			}
+			break;
+		case 3:
+			money = 0;
+			flavour = -1;
+			sugar = -1;
+			
+			state = 2;
 			break;
 		}
 	}
 
 	public void cancel(int i) {
-		switch (state) {
-		case 0:
-			flavour = -1;
-			break;
-		case 1:
-			if (sugar == -1)
-				state = 0;
-			sugar = -1;
-			break;
-		case 2:
-			if (money == 0)
-				state = 1;
+		if (state != 3) {
 			money = 0;
-			break;
+			flavour = -1;
+			sugar = -1;
+			
+			state = 2;
 		}
 	}
 

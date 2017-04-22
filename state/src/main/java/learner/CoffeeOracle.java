@@ -1,4 +1,4 @@
-package src;
+package learner;
 
 
 import de.ls5.jlearn.abstractclasses.LearningException;
