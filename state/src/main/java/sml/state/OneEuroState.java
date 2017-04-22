@@ -11,10 +11,10 @@ public class OneEuroState extends State {
 			context.setState(new OneEuroFiftyState());
 			break;
 		case EURO1:
-			context.setState(new TwoEuroState());
+			context.setState(TwoEuroState.GetTwoEuroState());
 			break;
 		case EURO2:
-			context.setState(new TwoEuroState());
+			context.setState(TwoEuroState.GetTwoEuroState());
 			System.out.println("INF: The machine returns EURO1");
 			break;
 		}

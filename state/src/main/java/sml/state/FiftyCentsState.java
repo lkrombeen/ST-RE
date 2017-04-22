@@ -15,7 +15,7 @@ public class FiftyCentsState extends State {
 			break;
 		case EURO2:
 			System.out.println("INF: The machine returns CENT50");
-			context.setState(new TwoEuroState());
+			context.setState(TwoEuroState.GetTwoEuroState());
 			break;
 		}
 	}

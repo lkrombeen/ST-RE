@@ -2,8 +2,17 @@ package sml.state;
 
 import enums.Coin;
 import enums.Flavour;
+import launcher.App;
 
 public class TwoEuroState extends State {
+	
+	public static TwoEuroState GetTwoEuroState() {
+		if (App.BUG) {
+			return new TwoEuroStateBug();
+		} else {
+			return new TwoEuroState();
+		}
+	}
 	
 	@Override
 	public void insertCoin(Context context, Coin coin) {

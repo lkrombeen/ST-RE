@@ -8,15 +8,15 @@ public class OneEuroFiftyState extends State {
 	public void insertCoin(Context context, Coin coin) {
 		switch (coin) {
 		case CENT50:
-			context.setState(new TwoEuroState());
+			context.setState(TwoEuroState.GetTwoEuroState());
 			break;
 		case EURO1:
 			System.out.println("INF: The machine returns CENT50");
-			context.setState(new TwoEuroState());
+			context.setState(TwoEuroState.GetTwoEuroState());
 			break;
 		case EURO2:
 			System.out.println("INF: The machine returns EURO1+CENT50");
-			context.setState(new TwoEuroState());
+			context.setState(TwoEuroState.GetTwoEuroState());
 			break;
 		}
 	}
